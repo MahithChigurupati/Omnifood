@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Omnifood is a premium food delivery service with the mission to bring affordable and healthy meals to as many people as possible.">
         
@@ -12,8 +11,7 @@
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
         <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
         <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic" rel="stylesheet" type="text/css">
-
-
+        
         <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="resources/favicon/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="resources/favicon/favicon-16x16.png">
@@ -24,7 +22,7 @@
 		<meta name="msapplication-config" content="resources/browserconfig.xml">
 		<meta name="theme-color" content="#ffffff">
 
-		
+        
         <title>Omnifood</title>
     </head>
     <body>
@@ -247,19 +245,19 @@
                 <div class="col span-1-of-3">
                     <blockquote>
                         Omnifood is just awesome! I just launched a startup which leaves me with no time for cooking, so Omnifood is a life-saver. Now that I got used to it, I couldn't live without my daily meals!
-                        <cite><img src="resources/img/customer-1.jpg" alt="customer-1">Alberto Duncan</cite>
+                        <cite><img src="resources/img/customer-1.jpg">Alberto Duncan</cite>
                     </blockquote>
                 </div>
                 <div class="col span-1-of-3">
                     <blockquote>
                        Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!
-                        <cite><img src="resources/img/customer-2.jpg" alt="customer-2">Joana Silva</cite>
+                        <cite><img src="resources/img/customer-2.jpg">Joana Silva</cite>
                     </blockquote>
                 </div>
                 <div class="col span-1-of-3">
                     <blockquote>
 I was looking for a quick and easy food delivery service in San Franciso. I tried a lot of them and ended up with Omnifood. Best food delivery service in the Bay Area. Keep up the great work!
-                    <cite><img src="resources/img/customer-3.jpg" alt="customer-3">Milton Chapman</cite>
+                    <cite><img src="resources/img/customer-3.jpg">Milton Chapman</cite>
                     </blockquote>
                 </div>
             </div>
@@ -339,8 +337,22 @@ I was looking for a quick and easy food delivery service in San Franciso. I trie
                 <h2>We're happy to hear from you</h2>
             </div>
             <div class="row">
-                <form method="post" action="#" class="contact-form">
+                <form method="post" action="mailer-new.php" class="contact-form">
+                    
                     <div class="row">
+                        <?php
+                            if($_GET['success']==1){
+                                echo "<div class=\"form-message success\"> Thank you! Your message has been sent. </div>";
+                            }
+                            if($_GET['success']==-1){
+                                echo "<div class=\"form-message error\"> Thank you! Your message has been sent. </div>";
+                            }
+                        ?>
+                        
+                    </div>
+                    <div class="row">
+                        
+                       
                         <div class="col span-1-of-3">
                             <label for="name">Name</label>
                         </div>
@@ -415,7 +427,6 @@ I was looking for a quick and easy food delivery service in San Franciso. I trie
                         <li><a href="https://en-gb.facebook.com/login/" target="_blank"><i class="ion-social-facebook"></i></a></li>
                         <li><a href="https://twitter.com/login?lang=en" target="_blank"><i class="ion-social-twitter"></i></a></li>
                         <li><a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank"><ion-icon class="instagram" name="logo-instagram"></ion-icon></a></li>
-                        
                     </ul>
                 </div>
             </div>
@@ -437,9 +448,8 @@ I was looking for a quick and easy food delivery service in San Franciso. I trie
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <script src="vendors/js/jquery.waypoints.min.js"></script>
     <script src="resources/js/script.js"></script>
-    
-
-	 <!-- Global site tag (gtag.js) - Google Analytics -->
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162699546-1"></script>
 		<script>
   		window.dataLayer = window.dataLayer || [];
@@ -448,7 +458,7 @@ I was looking for a quick and easy food delivery service in San Franciso. I trie
 
   		gtag('config', 'UA-162699546-1');
 		</script>
-
+    
     </body>  
     
 </html>
