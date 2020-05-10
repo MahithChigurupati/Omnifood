@@ -7,5 +7,5 @@ This is a Website created under the name [Omnifood](https://mahithchigurupati.gi
 **Tools USed :** Brackets Editor
 
 
-*This is created by Mahith Chigurupati as a part of learning HTML 5 ANd Css 3 course*
+*This is created by Mahith Chigurupati as a part of learning HTML 5 ANd CSS 3 course*
 
